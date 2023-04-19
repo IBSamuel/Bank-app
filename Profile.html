@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+<style>
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .mm{
+        height: 600px;
+        width: 300px;
+    }
+
+</style>
+<body>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TrustBank</a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas  offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header shadow shadow-sm">
+          <h5 class="offcanvas-title shadow shadow-sm" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="d-flex p-2 mt-5 shadow shadow-sm rounded">
+            <i class="bi bi-border"></i>
+            <a href="dashboard.html" class="nav-link">
+            <p class="ms-2">Dash Board</p>
+          </a>
+          </div>
+  <!-- History -->
+  <div class="d-flex p-2 shadow shadow-sm rounded">
+    <i class="bi bi-clock-history"></i>
+    <a href="History.html" class="nav-link">
+    <p class="ms-2">History</p>
+  </a>
+  </div>
+        <!-- Messages -->
+        <div class="d-flex p-2 shadow shadow-sm rounded">
+          <i class="bi bi-chat-left-dots-fill"></i>
+          <a href="messages.html" class="nav-link">
+          <p class="ms-2">Messages</p>
+        </a>
+        </div>
+  <!-- Logout -->
+  <div class="d-flex p-2 shadow shadow-sm rounded">
+    <i class="bi bi-person-lines-fill"></i>
+    <a href="SignIn.html" class="nav-link">
+    <p class="ms-2">Log out</p>
+    </a>
+  </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <div class="text">
+        <div class="mm text-center shadow rounded p-3">
+            <div class="mb-3">
+                <h1>Profile</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="rounded rounded-2 shadow bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg><br>
+                <label for="formGroupExampleInput" class="shadow-sm shadow form-label" id="newName">Name</label>
+                <input type="text" class="form-control shadow-sm shadow border-0" id="formGroupExampleInput" value="Adeosun Samuel">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label shadow-sm shadow">Email</label>
+                <input type="email" class="form-control shadow-sm shadow w-125 border-0" id="mail" value="ibsam26700749@gmail.com">
+                <label for="formGroupExampleInput2" class="form-label shadow-sm shadow">password</label>
+                <input type="password" class="form-control w-125 border-0 shadow-sm shadow" id="passwd" value="ibsam26700749@gmail.com">
+                <label for="formGroupExampleInput2" class="form-label shadow-sm shadow">Account Pin</label>
+                <input type="password" class="form-control w-125 border-0 shadow-sm shadow" id="pin" value="ibsam26700749@gmail.com"><br>
+                <button class="btn btn-primary w-50">Edit</button>
+              </div>
+        </div>
+    </div>
+    <script>
+      allNew=[]
+      newProfile ={
+        userNewName:newName.value,
+        userNewEmail:mail.value,
+        userNewPassWord:passwd.value,
+        userNewPin:pin.value
+      }
+    </script>
+</body>
+</html>

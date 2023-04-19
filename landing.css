@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: rockwell;
+}
+#product,.header{
+    color: orange;
+}
+.editimgae{
+    height: 50px;
+}
+.navbar{
+    background-color: orange;
+/* }
+#animationh1{
+		animation-name: focus-in-zoomout;
+		animation-duration: 2s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+}
+@keyframes focus-in-zoomout {
+			
+    0% {
+        letter-spacing:1em;
+        transform:translateY(300px);
+        filter:blur(12px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);
+        filter:blur(0);
+        opacity:1;
+    } */
+}
+.card{
+    animation-name: rotate-in-bottom;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+@keyframes rotate-in-bottom {
+			
+    0% {
+        transform:rotate(-360deg);
+        transform-origin:bottom;
+        opacity:0;
+    }
+    100% {
+        transform:rotate(0deg);
+        transform-origin:bottom;
+        opacity:1;
+    }
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#FFA500);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#FFA500);
+    border-radius: 20px;
+}

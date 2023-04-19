@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+   <meta charset- "UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>chart.js</title>
+</head>
+<body>
+  <canvas id="chartId" aria-label="chart" height="370" width="500"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+  <script>
+    const generateChart=()=>{
+      var chrt = document.getElementById("chartId").getContext("2d");
+      var chartId = new Chart(chrt, {
+        data: {
+          labels: ["Transaction", "Business", "Clothing","laundary","groceries" ],
+          datasets: [{
+            label: "online tutorial subjects",
+            data: [20, 40, 15, 30, 15],
+            backgroundColor: ['lightgreen', 'green','red', 'lightblue', 'gold'],
+          }],
+          
+        },
+        type: 'polarArea',
+        options: {
+          responsive: false,
+        },
+      });
+    }
+    generateChart()
+   </script>
+</body>
+</html> 

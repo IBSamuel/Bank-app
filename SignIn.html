@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="row">
+        <div class="col-lg-5 p-5 bg-transparent shadow">
+            <div>
+                <p class="text-center h3">Welcome</p>
+                <p class="text-center">Please enter your details.</p><br>
+                <div class="mb-3 ms-lg-5">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control w-75" id="mail" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text ">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3 ms-lg-5">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control w-75" id="pass">
+                </div>
+                <div class="mb-3 form-check ms-lg-5">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-success ms-5 w-50" onclick="signin()">Submit</button><br><br><br>
+                <p class="text-center">Don't have an account <a href="signUp.html" class="nav-link text-center">Sign Up</a></p>
+            </div>
+              </div>
+        <div class="col-lg-5 bg-primary shadow-sm">
+            <h1>Sign In</h1>
+
+        </div>
+    </section>
+    <script>
+      let userData = JSON.parse(localStorage.getItem("presentUserSignUp"))
+      console.log(userData);
+      const signin = ()=>{
+        userData.map((currentUser,index)=>{
+          let see =  false
+          console.log(currentUser);
+          if (currentUser.email==mail.value && currentUser.passWord==pass.value) {
+            see=true
+            // alert("wrong")
+          }
+          if (see==true) {
+          alert("User Signed In")
+          window.location.href="dashboard.html"
+          localStorage.setItem("currentIndex",index)
+        }
+
+        })
+      }
+    </script>
+    <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+</body>
+</html>

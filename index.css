@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+body{
+    background-image: url(bamboo-forest-kyoto-japan.jpg);
+    background-size: cover;
+    font-family: agency fb;
+    font-weight: lighter;
+    background-repeat: no-repeat;
+    
+}
+.img{
+    height: 200px;
+    width: 200px;
+    border-bottom-right-radius: 20px;
+}
+
+.h1{
+    font-size: 150px;
+    font-family: Agency fb;
+    color: transparent;
+    -webkit-text-stroke: white 2px;   
+    animation-name: focus-in-expand-top;
+		animation-duration: 2s;
+		animation-timing-function: ease;
+		animation-delay: 1s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+}
+.h3{
+    font-size: 80px;
+    animation-name: focus-in-contract;
+		animation-duration: 1s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: 2;
+		animation-direction: normal;
+		animation-fill-mode: none;
+}
+#second{
+    font-family: cursive;
+    text-align: center;
+    margin-top: 300px;
+}
+.btn{
+    animation-name: swirl-in-br-clock;
+		animation-duration: 2s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+}
+@keyframes focus-in-expand-top {
+			
+    0% {
+        letter-spacing:-.5em;
+        transform:translateY(-300px);
+        filter:blur(12px);
+        opacity:0;
+    }
+    0% {
+        transform:translateY(0);
+        filter:blur(0);
+        opacity:1;
+    }
+}
+@keyframes focus-in-contract {
+			
+    0% {
+        letter-spacing:1em;
+        filter:blur(12px);
+        opacity:0;
+    }
+    100% {
+        filter:blur(0);
+        opacity:1;
+    }
+}
+@keyframes swirl-in-br-clock {
+			
+    0% {
+        transform:rotate(-540deg) scale(0);
+        transform-origin:100% 100%;
+        opacity:0;
+    }
+    100% {
+        transform:rotate(0) scale(1);
+        transform-origin:100% 100%;
+        opacity:1;
+    }
+}
+
+@media screen and (max-width:688px) {
+    .h1{
+        font-size: 100px;
+        font-family: Agency fb;
+        color: transparent;
+ 
+    }
+}
